@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenu_Controller">
+   <center>
+      <AnchorPane prefHeight="700.0" prefWidth="1050.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="scoring" layoutX="94.0" layoutY="170.0" mnemonicParsing="false" onAction="#nextscoring" prefHeight="360.0" prefWidth="220.0" text="採点">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="analysis" layoutX="415.0" layoutY="170.0" mnemonicParsing="false" onAction="#nextanalysis" prefHeight="360.0" prefWidth="220.0" text="分析">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="view" layoutX="736.0" layoutY="170.0" mnemonicParsing="false" onAction="#nextview" prefHeight="360.0" prefWidth="220.0" text="閲覧">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

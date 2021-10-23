@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ImageView_Controller">
+   <center>
+      <AnchorPane prefHeight="170.0" prefWidth="730.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="turnback" layoutX="654.0" layoutY="21.0" mnemonicParsing="false" onAction="#turnbackbutton" prefHeight="26.0" prefWidth="55.0" text="戻る" />
+            <Label layoutX="35.0" layoutY="80.0" prefHeight="18.0" prefWidth="81.0" text="学籍番号 " />
+            <TextField fx:id="studentid" layoutX="103.0" layoutY="76.0" prefHeight="26.0" prefWidth="177.0" />
+            <Button fx:id="seach" layoutX="467.0" layoutY="76.0" mnemonicParsing="false" onAction="#SeachButton" prefHeight="26.0" prefWidth="92.0" text="表示" />
+            <ComboBox fx:id="year" layoutX="35.0" layoutY="34.0" prefWidth="150.0" promptText="開講年度" />
+            <ComboBox fx:id="subject" layoutX="199.0" layoutY="34.0" prefHeight="26.0" prefWidth="193.0" promptText="コース名" />
+            <ComboBox fx:id="examination" layoutX="409.0" layoutY="34.0" prefWidth="150.0" promptText="試験名" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ScoringResult_Controller">
+   <top>
+      <AnchorPane prefHeight="700.0" prefWidth="1050.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="save" layoutX="892.0" layoutY="622.0" mnemonicParsing="false" onAction="#sava_onClick" prefHeight="40.0" prefWidth="90.0" text="保存">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="trunback" layoutX="950.0" layoutY="25.0" mnemonicParsing="false" onAction="#ontrunbackbutton" prefHeight="32.0" prefWidth="65.0" text="戻る" />
+            <TableView fx:id="resulttable" layoutX="51.0" layoutY="80.0" prefHeight="515.0" prefWidth="932.0">
+              <columns>
+                <TableColumn fx:id="idcolumn" prefWidth="75.0" text="学籍番号" />
+                <TableColumn fx:id="scorecolumn" prefWidth="75.0" text="点数" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

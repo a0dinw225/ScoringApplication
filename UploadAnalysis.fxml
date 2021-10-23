@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UploadAnalysis_Controller">
+   <top>
+      <AnchorPane prefHeight="700.0" prefWidth="1050.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="csvtable" layoutX="36.0" layoutY="59.0" prefHeight="338.0" prefWidth="522.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C3" />
+              </columns>
+            </TableView>
+            <Label layoutX="587.0" layoutY="133.0" text="平均点" />
+            <Label layoutX="587.0" layoutY="96.0" text="最低点" />
+            <TextField fx:id="high" layoutX="659.0" layoutY="57.0" prefWidth="90.0" />
+            <TextField fx:id="lowest" layoutX="659.0" layoutY="92.0" prefWidth="90.0" />
+            <TextField fx:id="average" layoutX="659.0" layoutY="129.0" prefWidth="90.0" />
+            <Label layoutX="584.0" layoutY="182.0" text="S(90-100)" />
+            <Label layoutX="588.0" layoutY="221.0" text="A(80-89)" />
+            <Label layoutX="586.0" layoutY="258.0" text="B(70-79)" />
+            <Label layoutX="588.0" layoutY="293.0" text="C(60-69)" />
+            <Label layoutX="590.0" layoutY="331.0" text="D(0-59)" />
+            <TextField fx:id="s_score" layoutX="658.0" layoutY="178.0" prefWidth="90.0" />
+            <TextField fx:id="a_score" layoutX="659.0" layoutY="217.0" prefWidth="90.0" />
+            <TextField fx:id="b_score" layoutX="659.0" layoutY="254.0" prefWidth="90.0" />
+            <TextField fx:id="c_score" layoutX="661.0" layoutY="289.0" prefWidth="90.0" />
+            <TextField fx:id="d_score" layoutX="661.0" layoutY="327.0" prefWidth="90.0" />
+            <Label layoutX="38.0" layoutY="407.0" prefHeight="30.0" prefWidth="98.0" text="各問正答率">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TableView fx:id="answerrate" layoutX="33.0" layoutY="627.0" prefHeight="60.0" prefWidth="1020.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="47.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy></TableView>
+            <Label layoutX="590.0" layoutY="378.0" text="総人数" />
+            <TextField fx:id="totalpeople" layoutX="661.0" layoutY="374.0" prefWidth="90.0" />
+            <Button fx:id="turnback" layoutX="962.0" layoutY="20.0" mnemonicParsing="false" onAction="#turnbackbutton" prefHeight="26.0" prefWidth="55.0" text="戻る" />
+            <Label layoutX="587.0" layoutY="61.0" text="最高点" />
+            <Button fx:id="selectfile" layoutX="36.0" layoutY="21.0" mnemonicParsing="false" onAction="#SelectFileButton" text="ファイル選択" />
+            <TextField fx:id="directorypath" layoutX="145.0" layoutY="21.0" prefHeight="26.0" prefWidth="382.0" />
+            <Button fx:id="filedelete" layoutX="544.0" layoutY="20.0" mnemonicParsing="false" onAction="#FileDeleteButton" text="消去" />
+            <BarChart fx:id="barChart" layoutY="422.0" prefHeight="189.0" prefWidth="1066.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="34.0">
+              <xAxis>
+                <CategoryAxis endMargin="2.0" side="BOTTOM" startMargin="2.0" tickLength="6.0" tickMarkVisible="false" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis autoRanging="false" label="\%" side="LEFT" tickLength="5.0" tickMarkVisible="false" />
+              </yAxis>
+            </BarChart>
+            <PieChart fx:id="pieChart" layoutX="752.0" layoutY="91.0" prefHeight="288.0" prefWidth="291.0" />
+            <Label layoutX="494.0" layoutY="603.0" text="問題番号" />
+            <Label layoutX="868.0" layoutY="96.0" text="点数割合" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
